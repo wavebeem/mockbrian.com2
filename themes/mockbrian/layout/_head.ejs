@@ -1,0 +1,11 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title><%= page.title || config.title %></title>
+
+<%- open_graph({twitter_id: theme.twitter}) %>
+
+<%- css('tachyons.min') %>
+<%- css('style') %>
+
+<%- partial('_ga') %>

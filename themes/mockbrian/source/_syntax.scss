@@ -1,0 +1,53 @@
+// Using colors from the Google color guide:
+// https://www.google.com/design/spec/style/color.html#color-color-palette
+
+// Handy guide for Pygments cryptic CSS classes:
+// https://gist.github.com/scotu/1272660
+
+.highlight {
+  $bg: #333;
+  $fg: #eee;
+  $green: #9eebcf;
+  $blue: #96ccff;
+  $gray1: #ccc;
+  $gray2: #bbb;
+  $orange: #ffde37;
+
+  background: $bg;
+  color: $fg;
+
+  // .nt = Name tag
+  // .kd = Function
+  // .k = Keyword
+  // .kr = Keyword
+  .keyword { color: $green; }
+
+  // .na = Name attribute
+  // .nb = Name builtin
+  // .nn = Namespace
+  .built_in { color: $fg; }
+
+  // .p = Punctuation
+  // .o = Operator
+  // .si = String interpolation
+  .p, .o, .si, .se { color: $gray2; }
+
+  // .s = String
+  // .s1 = String
+  // .s2 = String
+  // .sr = Regexp
+  // .si = String escape
+  .meta, .string, .regexp { color: $orange; }
+
+  // .no = Named constant
+  // .kc = Constant
+  // .kt = Type constant
+  // .mi = Number
+  // .py = Named property
+  .number { color: $gray1; }
+
+  // .c = Comment
+  // .c1 = Comment
+  // .cm = Comment
+  .comment { color: $blue; }
+}

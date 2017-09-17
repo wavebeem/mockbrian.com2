@@ -1,0 +1,267 @@
+$green: #19a974;
+$darkGreen: #137752;
+$fontMain: "Helvetica", sans-serif;
+$fontPara: "Georgia", "Cambria", "Palatino", serif;
+$fontMonospace: "Fira Code", "Menlo", "Consolas", monospace;
+$fontHeading: "Lucida Grande", "Verdana", sans-serif;
+$codeColor: #e7040f;
+$gap: 1rem;
+$radius: 0.125em;
+$lightBorder: 2px solid rgba(white, 0.50);
+$smallGap: ($gap / 2);
+$contentWidth: 700px;
+$smallSize: $contentWidth;
+
+@media screen {
+  .print {
+    display: none;
+  }
+}
+
+@media print {
+  .screen {
+    display: none;
+  }
+}
+
+@media (max-width: 320px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+.font-main { font-family: $fontMain; }
+.ttu { text-transform: uppercase; }
+.ttl { text-transform: lowercase; }
+.tc { text-align: center; }
+.flex { display: flex; }
+.flex-column { flex-direction: column; }
+.flex-auto { flex: 1 1 auto; }
+.align-center { align-items: center; }
+.di { display: inline; }
+.dib { display: inline-block; }
+.db { display: block; }
+.min-vh-100 { min-height: 100vh; }
+.bold { font-weight: bold; }
+.list-reset { list-style: none; padding-left: initial; }
+.line-height-2 { line-height: 2; }
+.black-50 { color: rgba(0, 0, 0, 0.5); }
+.shadow-down { box-shadow: 0 2px 4px rgba(black, 0.35); }
+.transition-none { transition: none !important; }
+
+.width-fit-content {
+  width: -webkit-fit-content;
+  width: fit-content;
+}
+
+@mixin pretty-link {
+  background-color: rgba($green, 0.1);
+  padding: 0 2px;
+  text-decoration: underline;
+  -webkit-text-decoration-skip: skip;
+  text-decoration-skip: ink;
+
+  &,
+  &:link {
+    transition: none;
+  }
+
+  &:hover {
+    background-color: $green;
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.pretty-link {
+  @include pretty-link;
+}
+
+.underline-ink {
+  -webkit-text-decoration-skip: skip;
+  text-decoration-skip: ink;
+}
+
+.emoji-bullet {
+  margin-right: 0.2em;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: #fff;
+  color: black;
+  font-family: $fontMain;
+  font-size: 16px;
+  line-height: 1.2;
+
+  @media (max-width: $smallSize) {
+    font-size: 12px;
+  }
+}
+
+.BlogPost,
+.Resume {
+  max-width: 700px;
+  max-width: $contentWidth;
+  padding: $smallGap $gap;
+  font-family: $fontPara;
+  font-size: 1.2rem;
+  line-height: 1.5;
+
+  .PostDate {
+    font-size: 1.3rem;
+    font-family: $fontMain;
+    margin-top: (-$smallGap);
+    color: #555;
+    margin-bottom: 1.5rem;
+  }
+
+  pre,
+  code {
+    font-size: 0.8em;
+    font-family: $fontMonospace;
+  }
+
+  figure.highlight {
+    padding: 0.5rem;
+    margin: 1em 0;
+    border-radius: $radius;
+    overflow-x: auto;
+
+    pre {
+      margin: 0;
+    }
+  }
+
+  p,
+  ul li {
+    line-height: 1.5;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: $fontHeading;
+  }
+
+  h1 > a {
+    padding: 0;
+    color: inherit;
+    text-decoration: inherit;
+    border: none;
+    background: transparent;
+  }
+
+  section:not(:first-child) {
+    margin-top: 3em;
+  }
+
+  hr {
+    border: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  h1 {
+    font-size: 2.4rem;
+    margin-top: $gap;
+    margin-bottom: $smallGap;
+    padding-bottom: 0;
+    font-weight: 600;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    font-weight: normal;
+    margin-top: $gap;
+    margin-bottom: (-$gap);
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+  }
+
+  li a,
+  p a {
+    color: $darkGreen;
+    text-decoration: none;
+    @include pretty-link;
+  }
+
+  .anchorjs-link {
+    color: $darkGreen;
+  }
+
+  p code {
+    display: inline-block;
+    padding: 0 2px;
+    color: $codeColor;
+    background-color: rgba($codeColor, 0.05);
+  }
+}
+
+.BlogPost {
+  .toc {
+    list-style: none;
+    padding-left: initial;
+  }
+  .toc-link {
+    display: block;
+    background: transparent;
+    text-decoration: none;
+    font-size: 1.4rem;
+  }
+}
+
+.Resume {
+  h1,
+  h2 {
+    text-transform: uppercase;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 2.6rem;
+    margin-bottom: 3rem;
+  }
+
+  h2 {
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  ul {
+    padding-left: 0;
+    list-style-type: none;
+  }
+
+  ul ul {
+    padding-left: 2.5rem;
+    list-style-type: disc;
+  }
+
+  ul li ul li,
+  ul li + li {
+    margin-top: 1.5rem;
+  }
+
+  ul li ul li {
+    margin-top: 0.5rem;
+  }
+
+  .contact-info li {
+    margin-top: 0.5rem;
+  }
+}
+
+.link:focus,
+:focus {
+  outline: none;
+  box-shadow:
+    0 0 0 2px white,
+    0 0 0 4px black;
+}
