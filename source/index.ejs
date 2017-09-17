@@ -1,8 +1,11 @@
 ---
 layout: default
 title: "Brian Mock"
+description: "Brian Mock's blog and resume"
 tab: Home
 ---
+
+<% const t = Date.now(); %>
 
 <main class="ph4 mw7 mb2 center flex-auto lh-copy width-fit-content">
 
@@ -13,7 +16,7 @@ tab: Home
   <div class="tc mt2">
     <div class="tc ph4 pt2">
       <img
-        src="brian.png?t=2"
+        src="/brian.png?t=<%= t %>"
         width="352"
         height="352"
         class="br-100 bg-light-gray h-auto"

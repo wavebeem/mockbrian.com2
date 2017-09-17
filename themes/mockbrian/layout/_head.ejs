@@ -1,11 +1,19 @@
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<% const t = Date.now(); %>
 
-<title><%= page.title || config.title %></title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<%- open_graph({twitter_id: theme.twitter}) %>
+  <title><%= page.title || config.title %></title>
 
-<%- css('tachyons.min') %>
-<%- css('style') %>
+  <%- open_graph({twitter_id: theme.twitter}) %>
 
-<%- partial('_ga') %>
+  <link rel="stylesheet" media="screen" href="/tachyons.min.css?t=<%= t%>">
+  <link rel="stylesheet" media="screen" href="/style.css?t=<%= t%>">
+
+  <%- partial('_ga') %>
+
+  <% if (page.path === 'resume/index.html') { %>
+    <%- partial('_resume-style') %>
+  <% } %>
+</head>
