@@ -1,6 +1,7 @@
 <%
   const navDefault = 'link fb ph3 pv3 pv4-ns bn black-60 hover-black';
   const navCurrent = 'link fb ph3 pv3 pv4-ns green bb bw2';
+  const tab = page.tab || 'Blog';
 %>
 
 <div class="flex-ns bb bw1 b--black-10 mb4 align-center">
@@ -13,7 +14,7 @@
   </header>
   <nav class="ttu f3-ns f4 flex ph3">
     <% for (const item of site.data.menu) { %>
-      <% const css = page.tab === item.name ? navCurrent : navDefault; %>
+      <% const css = tab === item.name ? navCurrent : navDefault; %>
       <a href="<%- item.url %>" class="<%= css %>"><%= item.name %></a>
     <% } %>
   </nav>

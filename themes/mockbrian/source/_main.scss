@@ -106,7 +106,6 @@ html {
 
 .BlogPost,
 .Resume {
-  max-width: 700px;
   max-width: $contentWidth;
   padding: $smallGap $gap;
   font-family: $fontPara;
@@ -135,6 +134,10 @@ html {
 
     pre {
       margin: 0;
+    }
+
+    .code {
+      font-family: $fontMonospace;
     }
   }
 

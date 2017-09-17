@@ -1,25 +1,27 @@
 <% page.tab = 'Blog'; %>
 
-<%- partial('_nav') %>
+<div class="flex-auto">
+  <%- partial('_nav') %>
 
-<main class="mw7 center flex-auto nt4">
-  <ul class="mv0 list-reset">
-    <% page.posts.each(post => { %>
-      <li class="bb b--black-10">
-        <a
-          class="db no-underline green hover-dark-green pa4"
-          href="<%- post.path %>"
-        >
-          <h2 class="f3 mt0 mb0 font-main link">
-            <%= post.title %>
-          </h2>
-          <div class="mt1 f4 black">
-            <%= date(post.date) %>
-          </div>
-        </a>
-      </li>
-    <% }) %>
-  </ul>
-</main>
+  <main class="mw7 center flex-auto nt4">
+    <ul class="mv0 list-reset">
+      <% page.posts.each(post => { %>
+        <li class="bb b--black-10">
+          <a
+            class="db no-underline green hover-dark-green pa4"
+            href="<%- post.path %>"
+          >
+            <h2 class="f3 mt0 mb0 font-main link">
+              <%= post.title %>
+            </h2>
+            <div class="mt1 f4 black">
+              <%= date(post.date) %>
+            </div>
+          </a>
+        </li>
+      <% }) %>
+    </ul>
+  </main>
+</div>
 
 <%- partial('_footer') %>
