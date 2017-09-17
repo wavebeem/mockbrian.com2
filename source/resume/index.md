@@ -1,7 +1,6 @@
 ---
 layout: resume
 title: "Resume • Brian Mock"
-tab: Resume
 ---
 
 * * *

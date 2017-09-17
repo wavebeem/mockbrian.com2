@@ -1,12 +1,12 @@
-<% page.tab = "Blog"; %>
-
 <body class="flex flex-column min-vh-100">
   <div class="flex-auto">
     <%- partial('_nav') %>
     <main class="BlogPost ph4 mb3 center flex-auto">
       <h1><a href="#"><%= page.title %></a></h1>
       <div class="PostDate"><%= date(page.date) %></div>
-      <%- toc(page.content) %>
+      <div class="bt bb b--black-10 pv2">
+        <%- toc(page.content) %>
+      </div>
       <%- page.content %>
       <div class="bg-washed-yellow black-80 br1 b--black-10 ba font-main pa2 f5">
         There are no comments and there never will be. You can
