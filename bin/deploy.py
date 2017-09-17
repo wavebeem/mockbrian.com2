@@ -25,14 +25,14 @@ def make_favicon():
     """Build the favicon"""
     return run("""
         convert
-        favicon.png
-        favicon.ico
+        source/favicon.png
+        source/favicon.ico
     """)
 
 
-def jekyll(*args):
-    """Invoke jekyll build with optional args"""
-    run('bundle exec jekyll build {}'.format(' '.join(args)))
+def hexo_generate(*args):
+    """Generate the site content"""
+    run('hexo generate {}'.format(' '.join(args)))
 
 
 def sync(bucket):
@@ -40,7 +40,7 @@ def sync(bucket):
     run("""
         aws s3 sync
         --acl public-read
-        _site/
+        public/
         {}
     """.format(bucket))
 
@@ -63,12 +63,13 @@ def main():
         help='deploy to production'
     )
     args = parser.parse_args()
+    make_favicon()
     if args.production:
-        jekyll()
+        hexo_generate()
         sync(S3_PROD)
         invalidate(CF_DISTRO)
     else:
-        jekyll('--drafts')
+        hexo_generate('--draft')
         sync(S3_DEV)
 
 
