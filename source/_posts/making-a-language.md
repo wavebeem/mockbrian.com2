@@ -1,8 +1,7 @@
 ---
 title: "Making a Language"
-layout: post
 description: "How to make a programming language from scratch in JS"
-tab: blog
+date: 2016-11-01
 ---
 
 ## What's in a programming language?

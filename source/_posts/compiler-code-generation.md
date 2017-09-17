@@ -1,8 +1,7 @@
 ---
 title: "Compiler Code Generation"
 description: "How to make code generation for a compiler"
-layout: post
-tab: blog
+date: 2016-12-19
 ---
 
 ## What is code generation?

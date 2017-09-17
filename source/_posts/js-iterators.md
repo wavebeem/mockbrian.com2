@@ -1,8 +1,7 @@
 ---
 title: "JavaScript Iterators and More"
 description: "A comparison and overview of generators, iterators, and iterables in JS"
-layout: post
-tab: blog
+date: 2017-08-27
 ---
 
 ## Why
