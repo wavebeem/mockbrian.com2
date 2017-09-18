@@ -29,6 +29,10 @@ def make_favicon():
         source/favicon.ico
     """)
 
+def clean():
+    """Clean the build directory"""
+    run('rm -rf build')
+
 
 def hexo_generate(*args):
     """Generate the site content"""
@@ -63,6 +67,7 @@ def main():
         help='deploy to production'
     )
     args = parser.parse_args()
+    clean()
     make_favicon()
     if args.production:
         hexo_generate()
