@@ -5,50 +5,31 @@
 // https://gist.github.com/scotu/1272660
 
 .highlight {
-  $bg: #333;
-  $fg: #eee;
-  $green: #9eebcf;
-  $blue: #96ccff;
-  $gray1: #ccc;
-  $gray2: #bbb;
-  $orange: #ffde37;
-
-  background: $bg;
-  color: $fg;
+  background: #333;
+  color: #fff;
   border: 1px solid transparent;
 
-  // .nt = Name tag
-  // .kd = Function
-  // .k = Keyword
-  // .kr = Keyword
-  .keyword { color: $green; }
+  .name,
+  .keyword {
+    color: #9eebcf;
+  }
 
-  // .na = Name attribute
-  // .nb = Name builtin
-  // .nn = Namespace
-  .built_in { color: $fg; }
+  .meta,
+  .string,
+  .regexp {
+    color: #ffde37;
+  }
 
-  // .p = Punctuation
-  // .o = Operator
-  // .si = String interpolation
-  .p, .o, .si, .se { color: $gray2; }
+  .attr,
+  .built_in {
+    color: #ddd;
+  }
 
-  // .s = String
-  // .s1 = String
-  // .s2 = String
-  // .sr = Regexp
-  // .si = String escape
-  .meta, .string, .regexp { color: $orange; }
+  .number {
+    color: #E4A46C;
+  }
 
-  // .no = Named constant
-  // .kc = Constant
-  // .kt = Type constant
-  // .mi = Number
-  // .py = Named property
-  .number { color: $gray1; }
-
-  // .c = Comment
-  // .c1 = Comment
-  // .cm = Comment
-  .comment { color: $blue; }
+  .comment {
+    color: #96ccff;
+  }
 }
