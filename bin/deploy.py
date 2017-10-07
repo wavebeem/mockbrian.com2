@@ -29,6 +29,7 @@ def make_favicon():
         source/favicon.ico
     """)
 
+
 def clean():
     """Clean the public directory"""
     run('rm -rf public')
