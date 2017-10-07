@@ -30,8 +30,8 @@ def make_favicon():
     """)
 
 def clean():
-    """Clean the build directory"""
-    run('rm -rf build')
+    """Clean the public directory"""
+    run('rm -rf public')
 
 
 def hexo_generate(*args):
