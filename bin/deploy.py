@@ -37,7 +37,7 @@ def clean():
 
 def hexo_generate(*args):
     """Generate the site content"""
-    run('hexo generate {}'.format(' '.join(args)))
+    run('npx hexo generate {}'.format(' '.join(args)))
 
 
 def sync(bucket):
