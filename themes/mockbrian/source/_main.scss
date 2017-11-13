@@ -12,16 +12,8 @@ $smallGap: ($gap / 2);
 $contentWidth: 700px;
 $smallSize: $contentWidth;
 
-@media screen {
-  .print {
-    display: none;
-  }
-}
-
-@media print {
-  .screen {
-    display: none;
-  }
+.print {
+  display: none;
 }
 
 @media (max-width: 320px) {
@@ -78,8 +70,14 @@ $smallSize: $contentWidth;
 }
 
 .underline-ink {
+  // Safari
   -webkit-text-decoration-skip: skip;
+
+  // Older Chrome
   text-decoration-skip: ink;
+
+  // Newer Chrome
+  text-decoration-skip-ink: auto;
 }
 
 .emoji-bullet {

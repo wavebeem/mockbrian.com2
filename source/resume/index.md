@@ -5,24 +5,22 @@ title: "Resume • Brian Mock"
 
 * * *
 
-## Interests
+## Personal Skills
 
 - Creating simple, usable, delightful, and accessible web applications
 - Organizing modular code and applying functional programming techniques
-- Working with fun, kind people of many disciplines in a relaxed environment
 - Pairing with other developers and helping to grow their skills
 
 * * *
 
-## Core Skills
+## Core Technical Skills
 
-- JavaScript (ES5/ES6), HTML, CSS (and Sass/LESS), Git, GitHub
+- JavaScript (ES5/ES6), TypeScript, HTML, CSS (and Sass/LESS), Git
 - React, Ember, Webpack, Angular, Lodash, Mocha, Tachyons, ESLint
-- Deep understanding of JS, comfortable context switching between languages
 
 * * *
 
-## Other Skills
+## Other Technical Skills
 
 - Ruby, Python, Bash, Java, Amazon S3, Cloudfront, Route 53, JIRA
 
@@ -36,8 +34,7 @@ title: "Resume • Brian Mock"
 - **CrowdCompass**, *JavaScript Engineer* (February 2016–May 2017)
   - Pair programmed and mentored other developers and QA engineers
   - Developed client/server data contracts
-  - Maintained web app for event attendees (Ember)
-  - Maintained dashboard for event planners (Rails/jQuery)
+  - Maintained web app for event attendees (Ember), dashboard for event planners (Rails/jQuery)
   - Migrated CoffeeScript to ES6; developed ESLint code quality strategy
 - **Janrain**, *JavaScript Engineer* (September 2012–July 2015)
   - Built Angular dashboard site; built new social sharing widget (with 75% test coverage)
