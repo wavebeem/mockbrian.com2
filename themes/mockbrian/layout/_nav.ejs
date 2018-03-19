@@ -1,6 +1,7 @@
 <%
-  const navDefault = 'link fb ph3 pv3 pv4-ns bn black-60 hover-black';
-  const navCurrent = 'link fb ph3 pv3 pv4-ns green bb bw2';
+  const base = 'bb bw2 hover-bg-near-white link fb pa3 pv4-ns flex align-center';
+  const navDefault = base + ' b--transparent black-60';
+  const navCurrent = base + ' green';
   let tab = 'Home';
   // "Home" means the blog home -_-;
   if (is_post() || is_home() || is_archive()) {
@@ -10,18 +11,44 @@
   }
 %>
 
-<div class="flex-ns bb bw1 b--black-10 mb4 align-center">
-  <header class="ph3">
-    <h1 class="ph3 mt4 mt0-ns mb3 mb0-ns f3">
-      <a href="/" class="black no-underline">
-        <%= config.author %>
-      </a>
-    </h1>
-  </header>
-  <nav class="ttu f3-ns f4 flex ph3">
-    <% for (const item of site.data.menu) { %>
-      <% const css = tab === item.name ? navCurrent : navDefault; %>
-      <a href="<%- item.url %>" class="<%= css %>"><%= item.name %></a>
-    <% } %>
-  </nav>
+<!-- Small nav -->
+<div class="dn-ns">
+  <div class="bb bw1 b--black-10 mb4">
+    <header class="h-100">
+      <h1 class="h-100 ma0 f2">
+        <a href="/" class="hover-bg-near-white pa3 flex h-100 black no-underline">
+          <span class="pl4"><%= config.author %></span>
+        </a>
+      </h1>
+    </header>
+    <nav class="h-100 ttu f3 flex justify-center">
+      <% for (const item of site.data.menu) { %>
+        <% const css = tab === item.name ? navCurrent : navDefault; %>
+        <a href="<%- item.url %>" class="h-100 flex-auto <%= css %>">
+          <span class="w-100 db tc"><%= item.name %></span>
+        </a>
+      <% } %>
+    </nav>
+  </div>
+</div>
+
+<!-- Big nav -->
+<div class="dn db-ns">
+  <div class="flex bb bw1 b--black-10 mb4 align-center" style="height: 100px">
+    <header class="h-100">
+      <h1 class="h-100 mt0 mb0 f3">
+        <a href="/" class="hover-bg-near-white ph4 flex align-center h-100 black no-underline">
+          <span><%= config.author %></span>
+        </a>
+      </h1>
+    </header>
+    <nav class="h-100 ttu f3 flex">
+      <% for (const item of site.data.menu) { %>
+        <% const css = tab === item.name ? navCurrent : navDefault; %>
+        <a href="<%- item.url %>" class="<%= css %>">
+          <span><%= item.name %></span>
+        </a>
+      <% } %>
+    </nav>
+  </div>
 </div>
