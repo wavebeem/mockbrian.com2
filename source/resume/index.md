@@ -59,8 +59,8 @@ title: "Resume • Brian Mock"
 - Developed [yantp](https://chrome.google.com/webstore/detail/yet-another-new-tab-page/imfkhhcponjpjhfpaccepedaabjclbjj) Chrome tab page extension (2013-2016)
 - Wrote extensive documentation for [Ramda](https://github.com/ramda/ramda/pulls?q=is%3Apr+author%3Awavebeem+is%3Aclosed) (2013-2014)
 
-## Education
-
 * * *
+
+## Education
 
 - B.A., Computer Science, Willamette University, Salem OR (2012)
